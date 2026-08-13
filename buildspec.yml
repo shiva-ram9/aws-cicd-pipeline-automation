@@ -1,0 +1,22 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo Starting CodeBuild install phase
+  pre_build:
+    commands:
+      - echo Validating application files
+      - test -f app/index.html
+  build:
+    commands:
+      - echo Build phase started
+      - echo Building deployment artifact
+  post_build:
+    commands:
+      - echo Build completed
+artifacts:
+  files:
+    - app/**/*
+    - appspec.yml
+    - scripts/**/*
+  discard-paths: no
