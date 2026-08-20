@@ -50,11 +50,100 @@ bash tests/validate.sh
 - [x] CodeBuild specification created
 - [x] CodeDeploy specification and hooks created
 - [x] GitHub repository created
-- [ ] EC2 deployment target configured
-- [ ] CodeDeploy manual deployment validated
-- [ ] CodeBuild project configured
-- [ ] CodePipeline connected to GitHub
-- [ ] End-to-end deployment validated
+- [x] EC2 deployment target configured
+- [x] CodeDeploy manual deployment validated
+- [x] CodeBuild project configured
+- [x] CodePipeline connected to GitHub
+- [x] End-to-end deployment validated
+
+## Visual project walkthrough
+
+The screenshots below document the completed project from source control to the
+running Version 1.1 application.
+
+### 1. Project overview
+
+The deployed page summarizes the automated path from GitHub through CodeBuild
+and CodeDeploy to Amazon EC2.
+
+![CI/CD project overview](screenshots/01-project-overview.png)
+
+### 2. Public GitHub repository
+
+The repository contains the application, validation test, deployment scripts,
+AWS build and deployment specifications, and project documentation.
+
+![Public GitHub repository](screenshots/02-github-repository.png)
+
+### 3. Version 1.1 source commits
+
+The commit history records the application update and the fixes made while
+validating the automated pipeline.
+
+![GitHub Version 1.1 commits](screenshots/03-github-version-1.1-commit.png)
+
+### 4. EC2 deployment target
+
+The Amazon Linux EC2 instance is running with the project IAM role and the tags
+used by the CodeDeploy deployment group.
+
+![Running EC2 deployment target](screenshots/04-ec2-instance-running.png)
+
+### 5. EC2 IAM permissions
+
+The EC2 role grants Systems Manager access and read access to the deployment
+artifacts required by CodeDeploy.
+
+![EC2 IAM role permissions](screenshots/05-iam-ec2-role-permissions.png)
+
+### 6. CodeDeploy application and deployment group
+
+The CodeDeploy application targets the configured EC2 deployment group, whose
+latest deployment is successful.
+
+![CodeDeploy application and deployment group](screenshots/06-codedeploy-application.png)
+
+### 7. Successful CodeDeploy deployment
+
+CodeDeploy reports that the application revision was installed successfully on
+the EC2 instance.
+
+![Successful CodeDeploy deployment](screenshots/07-codedeploy-success.png)
+
+### 8. Successful CodeDeploy lifecycle hooks
+
+Every lifecycle event succeeded, including `DownloadBundle`, `BeforeInstall`,
+`ApplicationStart`, and the final `ValidateService` health check.
+
+![Successful CodeDeploy lifecycle events](screenshots/08-codedeploy-lifecycle-events.png)
+
+### 9. Successful CodeBuild validation
+
+CodeBuild completed the repository validation and produced the artifact passed
+to the deployment stage.
+
+![Successful CodeBuild validation](screenshots/09-codebuild-success.png)
+
+### 10. Successful end-to-end pipeline
+
+The final CodePipeline execution shows green Source, Build, and Deploy stages
+for the same revision.
+
+![Successful Source Build Deploy pipeline](screenshots/10-codepipeline-success.png)
+
+### 11. Version 1.1 running on EC2
+
+The public application displays Version 1.1, confirming that the GitHub change
+reached the EC2 web server.
+
+![Version 1.1 application running on EC2](screenshots/11-website-version-1.1.png)
+
+### 12. Application health check
+
+The `/health.html` endpoint returns `healthy`, which is the condition checked by
+the deployment validation script.
+
+![Healthy application endpoint](screenshots/12-health-check.png)
 
 ## AWS Region
 
