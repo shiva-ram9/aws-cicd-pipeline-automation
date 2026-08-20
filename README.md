@@ -2,6 +2,8 @@
 
 An end-to-end CI/CD project that automatically validates, packages, and deploys a versioned web application from GitHub to Amazon EC2.
 
+**Project author:** ARRA SHIVA RAM TEJA
+
 ## Target architecture
 
 ```mermaid
@@ -25,14 +27,14 @@ flowchart LR
 
 ```text
 .
-âââ app/                  # Versioned web application
-âââ scripts/              # CodeDeploy lifecycle scripts
-âââ tests/                # CI validation checks
-âââ docs/                 # Project notes and deployment guide
-âââ screenshots/          # Final AWS console evidence
-âââ appspec.yml           # CodeDeploy deployment definition
-âââ buildspec.yml         # CodeBuild build definition
-âââ README.md
+├── app/                  # Versioned web application
+├── scripts/              # CodeDeploy lifecycle scripts
+├── tests/                # CI validation checks
+├── docs/                 # Project notes and deployment guide
+├── screenshots/          # Final AWS console evidence
+├── appspec.yml           # CodeDeploy deployment definition
+├── buildspec.yml         # CodeBuild build definition
+└── README.md
 ```
 
 ## Local validation
