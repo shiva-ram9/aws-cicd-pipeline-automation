@@ -1,25 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS CI/CD Demo</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: 80px auto; padding: 24px; line-height: 1.6; }
-    .card { border: 1px solid #ddd; border-radius: 12px; padding: 32px; box-shadow: 0 4px 16px rgba(0,0,0,.08); }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h1>AWS CI/CD Pipeline is Working!</h1>
-    <p>This application is designed for deployment through AWS CodePipeline, CodeBuild, CodeDeploy, and Amazon EC2.</p>
-    <ul>
-      <li>Source: GitHub</li>
-      <li>Build: AWS CodeBuild</li>
-      <li>Deploy: AWS CodeDeploy</li>
-      <li>Server: Amazon EC2</li>
-    </ul>
-    <p>Deployment status: <strong>Successful</strong></p>
-  </div>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AWS CI/CD Pipeline Automation project deployment page">
+    <title>AWS CI/CD Pipeline | Version 1.0</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">AWS DEVOPS PROJECT</p>
+        <h1>CI/CD Pipeline Automation</h1>
+        <p class="summary">
+          Application changes move automatically from GitHub through validation,
+          build, and deployment to Amazon EC2.
+        </p>
+
+        <div class="release">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Deployment healthy</span>
+          <strong>Version 1.0</strong>
+        </div>
+      </section>
+
+      <section class="pipeline" aria-label="Pipeline stages">
+        <article>
+          <span>01</span>
+          <h2>Source</h2>
+          <p>GitHub</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Build &amp; Test</h2>
+          <p>AWS CodeBuild</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Deploy</h2>
+          <p>AWS CodeDeploy</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h2>Run</h2>
+          <p>Amazon EC2</p>
+        </article>
+      </section>
+
+      <footer>
+        <p>Automated by AWS CodePipeline</p>
+      </footer>
+    </main>
+  </body>
 </html>

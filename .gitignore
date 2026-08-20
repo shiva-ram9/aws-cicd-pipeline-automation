@@ -1,0 +1,18 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local environment and credentials
+.env
+.env.*
+*.pem
+*.key
+credentials
+
+# Build output and logs
+artifacts/
+build/
+dist/
+*.log
