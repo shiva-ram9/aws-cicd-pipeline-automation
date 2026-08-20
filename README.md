@@ -27,14 +27,14 @@ flowchart LR
 
 ```text
 .
-Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ app/                  # Versioned web application
-Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ scripts/              # CodeDeploy lifecycle scripts
-Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ tests/                # CI validation checks
-Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ docs/                 # Project notes and deployment guide
-Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ screenshots/          # Final AWS console evidence
-Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ appspec.yml           # CodeDeploy deployment definition
-Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ buildspec.yml         # CodeBuild build definition
-Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ README.md
+âââ app/                  # Versioned web application
+âââ scripts/              # CodeDeploy lifecycle scripts
+âââ tests/                # CI validation checks
+âââ docs/                 # Project notes and deployment guide
+âââ screenshots/          # Final AWS console evidence
+âââ appspec.yml           # CodeDeploy deployment definition
+âââ buildspec.yml         # CodeBuild build definition
+âââ README.md
 ```
 
 ## Local validation
