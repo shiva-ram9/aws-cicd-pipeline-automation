@@ -3,7 +3,7 @@ os: linux
 
 files:
   - source: app
-    destination: /var/www/html
+    destination: /usr/share/nginx/html
 
 hooks:
   ApplicationStop:
