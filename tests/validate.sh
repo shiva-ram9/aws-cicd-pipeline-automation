@@ -20,7 +20,7 @@ for required_file in "${required_files[@]}"; do
   fi
 done
 
-grep --quietE "Version [0-9]+\.[0-9]+" app/index.html
+grep -Eq "Version [0-9]+\.[0-9]+" app/index.html
 grep --quiet '^healthy$' app/health.html
 grep --quiet '^version: 0.0' appspec.yml
 grep --quiet '^version: 0.2' buildspec.yml
